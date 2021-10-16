@@ -2,7 +2,7 @@
 @if ($errors->any())
     <div class="w-100 absolute bg-red-500 text-white py-2 text-center z-20">
         <div class="font-medium ">
-            'Whoops! Something went wrong.
+            Whoops! Something went wrong.
         </div>
         <ul class="mt-3 list-disc list-inside text-sm ">
             @foreach ($errors->all() as $error)
