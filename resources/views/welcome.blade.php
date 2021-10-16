@@ -18,13 +18,13 @@
                 <div class="carousel slide carousel-fade relative" data-bs-ride="carousel">
                     <div class="carousel-inner ">
                         <div class="carousel-item active">
-                            <img src="{{asset('storage/travel1.jpg')}}" class="d-block w-100 h-screen object-cover" alt="...">
+                            <img src="/storage/travel1.jpg" class="d-block w-100 h-screen object-cover" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{asset('storage/travel2.jpeg')}}" class="d-block w-100 h-screen object-cover" alt="...">
+                            <img src="/storage/travel2.jpeg" class="d-block w-100 h-screen object-cover" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{asset('storage/travel3.jpg')}}" class="d-block w-100 h-screen object-cover" alt="...">
+                            <img src="/storage/travel3.jpg" class="d-block w-100 h-screen object-cover" alt="...">
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@
             <div class="col p-5">
                 <x-application-logo class="block h-32 w-auto fill-current text-gray-600 mx-auto" />
                 <h1 class="text-center font-bold text-5xl mb-12">Login</h1>
-                <form action="{{ route('login') }}" method="POST">
+                <form action="/login" method="POST">
                     @csrf
 
                     <div class="form-floating mb-3">
@@ -56,7 +56,7 @@
                         <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Login</button>
                     </div>
 
-                    <a  class="d-block text-center mt-2 small" href="{{route('register')}}">Don't Have an account? Sign Up</a>
+                    <a  class="d-block text-center mt-2 small" href="/register">Don't Have an account? Sign Up</a>
                 </form>
             </div>
         </div>

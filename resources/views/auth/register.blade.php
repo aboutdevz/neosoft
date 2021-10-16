@@ -1,4 +1,16 @@
 <x-guest-layout>
+@if ($errors->any())
+    <div class="w-100 absolute bg-red-500 text-white py-2 text-center opacity-60 backdrop-filter backdrop-blur">
+        <div class="font-medium ">
+            'Whoops! Something went wrong.
+        </div>
+        <ul class="mt-3 list-disc list-inside text-sm ">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <main class="container-fluid h-screen">
         <div class="row items-center">
             <div class="col-7 p-0">
@@ -21,7 +33,7 @@
             </div>
             <div class="col p-5">
                 <h1 class="text-center font-bold text-5xl mb-12">Register</h1>
-                <form action="{{ route('register') }}" method="POST">
+                <form action="/register" method="POST">
                     @csrf
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="{{old('name')}}" required autofocus>
@@ -55,7 +67,7 @@
                         <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Register</button>
                     </div>
 
-                    <a class="d-block text-center mt-2 small" href="{{route('login')}}">Have an account? Sign In</a>
+                    <a class="d-block text-center mt-2 small" href="/">Have an account? Sign In</a>
                 </form>
                 
             </div>
