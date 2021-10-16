@@ -1,6 +1,6 @@
 <x-guest-layout>
 @if ($errors->any())
-    <div class="w-100 absolute bg-red-500 text-white py-2 text-center opacity-60 backdrop-filter backdrop-blur">
+    <div class="w-100 absolute bg-red-500 text-white py-2 text-center z-20">
         <div class="font-medium ">
             'Whoops! Something went wrong.
         </div>
